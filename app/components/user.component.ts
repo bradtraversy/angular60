@@ -32,12 +32,9 @@ export class UserComponent  {
     });
   }
 
+
   toggleHobbies(){
-      if(this.showHobbies == true){
-          this.showHobbies = false;
-      } else {
-        this.showHobbies = true;
-      }
+      this.showHobbies = !this.showHobbies;
   }
 
   addHobby(hobby: any){
