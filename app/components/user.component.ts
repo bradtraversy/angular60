@@ -40,11 +40,11 @@ export class UserComponent  {
       }
   }
 
-  addHobby(hobby){
+  addHobby(hobby: any){
       this.hobbies.push(hobby);
   }
 
-  deleteHobby(i){
+  deleteHobby(i: any){
       this.hobbies.splice(i, 1);
   }
 }
