@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'about',
-  template: `
-    <h1>About This App</h1>
-    `,
+  templateUrl: 'about.component.html',
 })
-export class AboutComponent  { 
-  
-}
+export class AboutComponent  {
+    header_title: string;
+
+    constructor(){
+      this.header_title = "This is an about page!"
+    }
+    
+ }

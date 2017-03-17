@@ -1,12 +1,12 @@
 <h1>{{name}}</h1>
     <p><strong>Email:</strong> {{email}}</p>
     <p><strong>Address:</strong> {{address.street}} {{address.city}}, {{address.state}}</p>
-    <button (click)="toggleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
+    <button class="btn btn-default btn-md" style="cursor:pointer;" (click)="toggleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
     <div *ngIf="showHobbies">
         <h3>Hobbies</h3>
         <ul>
             <li *ngFor="let hobby of hobbies; let i = index">
-                {{hobby}} <button (click)="deleteHobby(i)">X</button>
+                {{hobby}} <button  class="btn btn-success btn-delete btn-xs" (click)="deleteHobby(i)">X</button>
             </li>
         </ul>
         <form (submit)="addHobby(hobby.value)">
